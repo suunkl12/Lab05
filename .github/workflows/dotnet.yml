@@ -43,11 +43,19 @@ jobs:
       with:
         # Required permission level (read, write, admin)
         required-permission: read
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v2.0.9
+    - name: Download artifact
+  # You may pin to the exact commit or the version.
+  # uses: aochmann/actions-download-artifact@5709392f11b5937bd316e52687ad87f7deced5f5
+      uses: aochmann/actions-download-artifact@1.0.4
       with:
-        # Artifact name
+        # GitHub token
+        #github_token: # optional, default is ${{github.token}}
+        # Repository name with owner
+        #repo: # optional, default is ${{github.repository}}
+        # Artifact name (download all artifacts in not specified)
         name: upload
-        # Destination path
-        path: ./
+        # Download latest artifact
+        #latest: # optional
+        # Artifact unpack location
+        #path: # optional, default is ./
        
