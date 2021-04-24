@@ -51,7 +51,7 @@ jobs:
         # GitHub token
         github_token: ${{github.token}}  # optional, default is ${{github.token}}
         # Repository name with owner
-        #repo: # optional, default is ${{github.repository}}
+        repo: ${{github.repository}} # optional, default is ${{github.repository}}
         # Artifact name (download all artifacts in not specified)
         name: upload
         # Download latest artifact
