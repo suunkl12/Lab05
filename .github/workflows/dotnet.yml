@@ -29,4 +29,18 @@ jobs:
       uses: TonyBogdanov/zip@1.0
       with:
         args: zip -qq -r publish.zip . -i /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        # Artifact name
+        name: upload
+        # A file, directory or wildcard pattern that describes what to upload
+        path: publish.zip
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.0.9
+      with:
+        # Artifact name
+        name: upload
+        # Destination path
+        path: publish.zip
        
