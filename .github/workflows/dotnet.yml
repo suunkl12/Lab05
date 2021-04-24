@@ -28,5 +28,5 @@ jobs:
     - name: Decompress
       uses: TonyBogdanov/zip@1.0
       with:
-        args: zip -qq -r /publish.zip /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish 
+        args: zip -qq -r /publish.zip Lab05 -> /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish/
        
