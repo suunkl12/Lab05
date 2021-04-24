@@ -24,4 +24,9 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish 
+      run: dotnet publish ./publish
+    - name: Decompress
+      uses: TonyBogdanov/zip@1.0
+      with:
+        args: zip -qq -r ./publish.zip ./publish
+       
