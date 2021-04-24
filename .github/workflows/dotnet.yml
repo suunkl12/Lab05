@@ -40,7 +40,7 @@ jobs:
       uses: actions/download-artifact@v2.0.9
       with:
         # Artifact name
-        name: download
+        name: upload
         # Destination path
-        path: publish.zip
+        path: ./
        
