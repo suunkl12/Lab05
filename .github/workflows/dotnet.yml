@@ -25,7 +25,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish /home/runner/work/Lab05/bin/publish
+      run: dotnet publish
     - uses: actions/checkout@v2
     - uses: papeloto/action-zip@v1
       with:
