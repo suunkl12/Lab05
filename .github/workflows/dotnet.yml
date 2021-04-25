@@ -24,13 +24,13 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - run: cd ${{ github.workspace }}
+    - run: cd /home/runner/work/Lab05
     - run: mkdir -p publish
     - name: Publish
-      run: dotnet publish ${{ github.workspace }}/publish
+      run: dotnet publish /home/runner/work/Lab05/publish
     - uses: papeloto/action-zip@v1
       with:
-        files: ${{ github.workspace }}/publish
+        files: /home/runner/work/Lab05/publish
         dest: result.zip
     - uses: actions/upload-artifact@v1
       with:
