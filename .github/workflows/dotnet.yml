@@ -38,5 +38,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: publish
-        path: /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish
+        path: publish.zip
        
