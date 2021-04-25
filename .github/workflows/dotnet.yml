@@ -24,16 +24,12 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - run: cd /home/runner/work/Lab05
     - run: mkdir -p publish
     - name: Publish
-      run: dotnet publish /home/runner/work/Lab05/publish
-    - uses: papeloto/action-zip@v1
+      run: dotnet publish
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
       with:
-        files: /home/runner/work/Lab05/publish
-        dest: result.zip
-    - uses: actions/upload-artifact@v1
-      with:
-        name: my-artifact
-        path: ${{ github.workspace }}/result.zip
+        name: WebApp1
+        path: /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish/
        
