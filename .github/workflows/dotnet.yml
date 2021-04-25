@@ -35,7 +35,7 @@ jobs:
         # Base path for archive files
         path: ./publish # optional, default is .
         # Working directory before zipping
-        directory: ./home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish/ # optional, default is .
+        directory: ${{ github.workspace }} # optional, default is .
     - uses: actions/checkout@v2
     
     - uses: actions/upload-artifact@v2
