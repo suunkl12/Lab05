@@ -30,6 +30,6 @@ jobs:
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: WebApp1
+        name: Release
         path: /home/runner/work/Lab05/Lab05/Lab05/bin/Debug/net5.0/publish/
        
